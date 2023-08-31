@@ -24,7 +24,6 @@ const tabHandelar = (datas) => {
   });
 };
 const videoHandelar = (videoID) => {
-  console.log(videoID);
   const videoHandelar = async () => {
     const res = await fetch(
       `https://openapi.programming-hero.com/api/videos/category/${videoID}`
@@ -34,26 +33,41 @@ const videoHandelar = (videoID) => {
 
     console.log(data);
     videoContainer.innerHTML = "";
-    data.forEach((item) => {
-      const div = document.createElement("div");
 
-      let verifed = item.authors[0].verified;
+    // abar error
+    if (data.length === 0) {
+      const errorDiv = document.createElement("div");
+      errorDiv.innerHTML = `
+      <p class="text-red-500">No videos available for this category.</p>
+    `;
+      videoContainer.appendChild(errorDiv);
+    } else {
+      // abar error
 
-      let verifedImg = (verifed) => {
-        let srcImg;
-        if (verifed) {
-          srcImg = "image/coto_tik.png";
-          return srcImg;
-        } else {
-          srcImg = "";
-          return srcImg;
-        }
-      };
+      data.forEach((item) => {
+        // new error
 
-      div.innerHTML = `
+        // new error
+
+        const div = document.createElement("div");
+
+        let verifed = item?.authors[0]?.verified;
+
+        let verifedImg = (verifed) => {
+          let srcImg;
+          if (verifed) {
+            srcImg = "image/coto_tik.png";
+            return srcImg;
+          } else {
+            srcImg = "";
+            return srcImg;
+          }
+        };
+
+        div.innerHTML = `
       <div class="main-item">
       <div class="relative">
-        <img class="rounded-xl h-[205px]" src="${item.thumbnail}" alt="">
+        <img class="rounded-xl h-[205px]" src="${item?.thumbnail}" alt="">
         <div class="absolute right-3 bottom-3">
           <span class="w-14 h-6 bg-slate-800 text-sm text-white p-1 rounded hidden ">3hrs 56 min ago</span>
         </div>
@@ -61,7 +75,7 @@ const videoHandelar = (videoID) => {
       <div class="botom-part flex items-center my-3 gap-2">
         <div class="w-20 ">
           <img class=" rounded-full w-20" src="${
-            item.authors[0]?.profile_picture
+            item?.authors[0]?.profile_picture
           }" alt="">
         </div>
         <div class="title-video">
@@ -90,8 +104,9 @@ const videoHandelar = (videoID) => {
 
     </div>
       `;
-      videoContainer.appendChild(div);
-    });
+        videoContainer?.appendChild(div);
+      });
+    }
   };
   videoHandelar();
 };
