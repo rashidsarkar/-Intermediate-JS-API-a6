@@ -2,24 +2,23 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PHero tube</title>
 
   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
   <style>
     * {
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
 
 
     }
   </style>
-
 </head>
 
 <body>
@@ -34,30 +33,176 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
               </svg>
             </label>
-            <ul tabindex="0" class="menu  menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-32">
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-32">
               <li><a class="bg-[#25252533]">Sort by view</a></li>
-
             </ul>
           </div>
-          <a class="btn btn-ghost normal-case text-xl"><img class="w-36" src="image/Logo.png" alt=""></a>
+          <a class="btn btn-ghost normal-case text-xl"><img class="w-36" src="image/Logo.png" alt="" /></a>
         </div>
         <div class="navbar-center md:flex hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
-            <li><a class="bg-[#25252533]">Sort by view</a></li>
-
+            <li>
+              <a class="bg-[#25252533] text-lg font-medium">Sort by view</a>
+            </li>
           </ul>
         </div>
         <div class="navbar-end">
-          <a class="btn bg-red-500 hover:bg-red-500">Blog</a>
+          <a class="btn bg-red-500 hover:bg-red-500 text-lg font-medium">Blog</a>
         </div>
       </div>
     </nav>
-
-
   </header>
 
-  <main>
+  <main class="container mx-auto">
     <section>
+      <div class="tab_main">
+        <div class="tabs tabs-boxed gap-3 justify-center items-center bg-white my-3">
+          <a class="tab tab-lg bg-gray-900 bg-opacity-10 text-base text-gray-900 text-opacity-70 font-medium">Tab 2</a>
+          <a class="tab tab-lg bg-gray-900 bg-opacity-10 text-base text-gray-900 text-opacity-70 font-medium">Tab 2</a>
+          <a class="tab tab-lg bg-gray-900 bg-opacity-10 text-base text-gray-900 text-opacity-70 font-medium">Tab 2</a>
+          <a class="tab tab-lg bg-gray-900 bg-opacity-10 text-base text-gray-900 text-opacity-70 font-medium">Tab 2</a>
+
+        </div>
+      </div>
+
+    </section>
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-2">
+      <!-- part 1  -->
+      <div class="main-item">
+        <div class="relative">
+          <img class="rounded-xl" src="image/test_img.jpg" alt="">
+          <div class="absolute right-3 bottom-3">
+            <span class="w-14 h-6 bg-slate-800 text-sm text-white p-1 rounded ">3hrs 56 min ago</span>
+          </div>
+        </div>
+        <div class="botom-part flex items-center my-3 gap-2">
+          <div class="w-20 ">
+            <img class=" rounded-full w-20" src="image/test_sml.jpg" alt="">
+          </div>
+          <div class="title-video">
+            <h3 class="text-base text-gray-900 font-bold ">
+              Building a Winning UX Strategy Using the Kano Model
+            </h3>
+          </div>
+
+        </div>
+        <div class="pl-12">
+          <div class="text_tik">
+            <h3 class=" flex items-center gap-4 text-base font-normal text-[##171717b3]">Awlad Hossain
+              <span>
+                <img src="image/coto_tik.png" alt="">
+              </span>
+            </h3>
+
+          </div>
+
+          <p class=" text-base font-normal text-[##171717b3]"> <span>91</span>K views</p>
+        </div>
+
+      </div>
+      <!-- part 1  -->
+      <!-- part 2  -->
+      <div class="main-item">
+        <div class="relative">
+          <img class="rounded-xl" src="image/test_img.jpg" alt="">
+          <div class="absolute right-3 bottom-3">
+            <span class="w-14 h-6 bg-slate-800 text-sm text-white p-1 rounded ">3hrs 56 min ago</span>
+          </div>
+        </div>
+        <div class="botom-part flex items-center my-3 gap-2">
+          <div class="w-20 ">
+            <img class=" rounded-full w-20" src="image/test_sml.jpg" alt="">
+          </div>
+          <div class="title-video">
+            <h3 class="text-base text-gray-900 font-bold ">
+              Building a Winning UX Strategy Using the Kano Model
+            </h3>
+          </div>
+
+        </div>
+        <div class="pl-12">
+          <div class="text_tik">
+            <h3 class=" flex items-center gap-4 text-base font-normal text-[##171717b3]">Awlad Hossain
+              <span>
+                <img src="image/coto_tik.png" alt="">
+              </span>
+            </h3>
+
+          </div>
+
+          <p class=" text-base font-normal text-[##171717b3]"> <span>91</span>K views</p>
+        </div>
+
+      </div>
+      <!-- part 2  -->
+      <!-- part 3  -->
+      <div class="main-item">
+        <div class="relative">
+          <img class="rounded-xl" src="image/test_img.jpg" alt="">
+          <div class="absolute right-3 bottom-3">
+            <span class="w-14 h-6 bg-slate-800 text-sm text-white p-1 rounded ">3hrs 56 min ago</span>
+          </div>
+        </div>
+        <div class="botom-part flex items-center my-3 gap-2">
+          <div class="w-20 ">
+            <img class=" rounded-full w-20" src="image/test_sml.jpg" alt="">
+          </div>
+          <div class="title-video">
+            <h3 class="text-base text-gray-900 font-bold ">
+              Building a Winning UX Strategy Using the Kano Model
+            </h3>
+          </div>
+
+        </div>
+        <div class="pl-12">
+          <div class="text_tik">
+            <h3 class=" flex items-center gap-4 text-base font-normal text-[##171717b3]">Awlad Hossain
+              <span>
+                <img src="image/coto_tik.png" alt="">
+              </span>
+            </h3>
+
+          </div>
+
+          <p class=" text-base font-normal text-[##171717b3]"> <span>91</span>K views</p>
+        </div>
+
+      </div>
+      <!-- part 3  -->
+      <!-- part 4  -->
+      <div class="main-item">
+        <div class="relative">
+          <img class="rounded-xl" src="image/test_img.jpg" alt="">
+          <div class="absolute right-3 bottom-3">
+            <span class="w-14 h-6 bg-slate-800 text-sm text-white p-1 rounded ">3hrs 56 min ago</span>
+          </div>
+        </div>
+        <div class="botom-part flex items-center my-3 gap-2">
+          <div class="w-20 ">
+            <img class=" rounded-full w-20" src="image/test_sml.jpg" alt="">
+          </div>
+          <div class="title-video">
+            <h3 class="text-base text-gray-900 font-bold ">
+              Building a Winning UX Strategy Using the Kano Model
+            </h3>
+          </div>
+
+        </div>
+        <div class="pl-12">
+          <div class="text_tik">
+            <h3 class=" flex items-center gap-4 text-base font-normal text-[##171717b3]">Awlad Hossain
+              <span>
+                <img src="image/coto_tik.png" alt="">
+              </span>
+            </h3>
+
+          </div>
+
+          <p class=" text-base font-normal text-[##171717b3]"> <span>91</span>K views</p>
+        </div>
+
+      </div>
+      <!-- part 4  -->
 
     </section>
   </main>
