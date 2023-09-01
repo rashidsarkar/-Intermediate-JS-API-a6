@@ -3,7 +3,7 @@ const tabMain = document.getElementById("tab_main");
 const videoContainer = document.getElementById("video-container");
 const videoContainer2 = document.getElementById("video-container2");
 const sortVewelement = document.getElementById("sort-vew");
-const sortVewCoto = document.getElementById("sort_item_element");
+const sortVewelementCoto = document.getElementById("sort-vew-coto");
 
 const dataHandle = async () => {
   const res = await fetch(
@@ -167,12 +167,8 @@ const videoHandler = (videoID) => {
   videoHandler();
 };
 
-sortVewelement.addEventListener("click", () => {
-  clicked();
-});
-sortVewCoto.addEventListener("click", () => {
-  clicked();
-});
+// Event listener to handle sorting
+sortVewelement.addEventListener("click", clicked());
 
 function clicked() {
   // Sort the showData array based on views in descending order

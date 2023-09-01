@@ -3,7 +3,6 @@ const tabMain = document.getElementById("tab_main");
 const videoContainer = document.getElementById("video-container");
 const videoContainer2 = document.getElementById("video-container2");
 const sortVewelement = document.getElementById("sort-vew");
-const sortVewCoto = document.getElementById("sort_item_element");
 
 const dataHandle = async () => {
   const res = await fetch(
@@ -167,14 +166,8 @@ const videoHandler = (videoID) => {
   videoHandler();
 };
 
-sortVewelement.addEventListener("click", () => {
-  clicked();
-});
-sortVewCoto.addEventListener("click", () => {
-  clicked();
-});
-
-function clicked() {
+// Event listener to handle sorting
+sortVewelement.addEventListener("click", function () {
   // Sort the showData array based on views in descending order
   showData.sort((a, b) => {
     const viewsA = parseFloat(a.others.views.replace("K", "")) * 1000;
@@ -265,5 +258,6 @@ function clicked() {
     div.classList.add("mx-auto");
     videoContainer?.appendChild(div);
   });
-}
+});
+
 dataHandle();
