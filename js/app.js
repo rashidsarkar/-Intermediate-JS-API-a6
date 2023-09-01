@@ -17,7 +17,6 @@ const dataHandle = async () => {
 
 const tabHandler = (datas) => {
   videoHandler("1000");
-  console.log(datas);
 
   datas.forEach((data) => {
     const div = document.createElement("div");
@@ -66,7 +65,6 @@ const videoHandler = (videoID) => {
     const data = datas.data;
     showData = data;
 
-    console.log(data);
     videoContainer.innerHTML = "";
 
     if (data.length === 0) {
