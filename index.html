@@ -23,17 +23,30 @@
       max-width: 100%;
       height: auto;
     }
+
+
+
+    .img_div {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .imgs {
+      width: 100%;
+    }
   </style>
 </head>
 
 <body>
   <header>
-    <nav class="border-b-2 border-gray-900 border-opacity-20 container mx-auto">
+    <nav class="container mx-auto border-b-2 border-gray-900 border-opacity-20">
       <div class="navbar bg-base-100">
         <div class="navbar-start">
           <div class="dropdown">
             <label tabindex="0" class="btn btn-ghost md:hidden lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
               </svg>
@@ -42,17 +55,17 @@
               <li><a class="bg-[#25252533]">Sort by view</a></li>
             </ul>
           </div>
-          <a class="btn btn-ghost normal-case text-xl"><img class="w-36" src="image/Logo.png" alt="" /></a>
+          <a class="text-xl normal-case btn btn-ghost"><img class="w-36" src="image/Logo.png" alt="" /></a>
         </div>
-        <div class="navbar-center md:flex hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
+        <div class="hidden navbar-center md:flex lg:flex">
+          <ul class="px-1 menu menu-horizontal">
             <li>
               <a class="bg-[#25252533] text-lg font-medium">Sort by view</a>
             </li>
           </ul>
         </div>
         <div class="navbar-end">
-          <a class="btn bg-red-500 hover:bg-red-500 text-lg font-medium">Blog</a>
+          <a class="text-lg font-medium bg-red-500 btn hover:bg-red-500">Blog</a>
         </div>
       </div>
     </nav>
@@ -61,19 +74,19 @@
   <main class="container mx-auto">
     <section>
 
-      <div id="tab_main" class="tabs tabs-boxed gap-3 justify-center items-center bg-white my-3">
+      <div id="tab_main" class="items-center justify-center gap-3 my-3 bg-white tabs tabs-boxed">
 
 
-        <!-- <a class="tab tab-lg bg-gray-900 bg-opacity-10 text-base text-gray-900 text-opacity-70 font-medium">Tab 2</a>
-        <a class="tab tab-lg bg-gray-900 bg-opacity-10 text-base text-gray-900 text-opacity-70 font-medium">Tab 2</a>
-        <a class="tab tab-lg bg-gray-900 bg-opacity-10 text-base text-gray-900 text-opacity-70 font-medium">Tab 2</a>
-        <a class="tab tab-lg bg-gray-900 bg-opacity-10 text-base text-gray-900 text-opacity-70 font-medium">Tab 2</a> -->
+        <!-- <a class="text-base font-medium text-gray-900 bg-gray-900 tab tab-lg bg-opacity-10 text-opacity-70">Tab 2</a>
+        <a class="text-base font-medium text-gray-900 bg-gray-900 tab tab-lg bg-opacity-10 text-opacity-70">Tab 2</a>
+        <a class="text-base font-medium text-gray-900 bg-gray-900 tab tab-lg bg-opacity-10 text-opacity-70">Tab 2</a>
+        <a class="text-base font-medium text-gray-900 bg-gray-900 tab tab-lg bg-opacity-10 text-opacity-70">Tab 2</a> -->
 
       </div>
 
 
     </section>
-    <section id="video-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-2">
+    <section id="video-container" class="grid grid-cols-1 gap-4 p-2 md:grid-cols-2 lg:grid-cols-4">
 
 
       <!-- part 1  -->
@@ -81,20 +94,20 @@
         <div class="relative">
           <img class="rounded-xl h-[205px]" src="image/test_img.jpg" alt="">
           <div class="absolute right-3 bottom-3">
-            <span class="w-14 h-6 bg-slate-800 text-sm text-white p-1 rounded ">3hrs 56 min ago</span>
+            <span class="h-6 p-1 text-sm text-white rounded w-14 bg-slate-800 ">3hrs 56 min ago</span>
           </div>
         </div>
-        <div class="botom-part flex items-center my-3 gap-2">
+        <div class="flex items-center gap-2 my-3 botom-part">
           <div class="cercle-img">
-            <div class="flex flex-wrap bg-green-500 p-0 m-0">
-              <div class="w-2 sm:w-4/12 px-0 m-0">
-                <img src="image/test_sml.jpg" alt="..."
-                  class="shadow-lg rounded-full max-w-full h-auto align-middle border-none" />
+            <div class="flex flex-wrap p-0 m-0 ">
+              <div class="flex items-center justify-center w-full ">
+                <img src="image/work.jpg" alt="" class="h-[70px] w-[70px] rounded-[50%]  " />
               </div>
+
             </div>
           </div>
           <div class="title-video">
-            <h3 class="text-base text-gray-900 font-bold ">
+            <h3 class="text-base font-bold text-gray-900 ">
               Building a Winning UX Strategy Using the Kano Model
             </h3>
           </div>
@@ -120,15 +133,15 @@
         <div class="relative">
           <img class="rounded-xl h-[205px]" src="image/test_img.jpg" alt="">
           <div class="absolute right-3 bottom-3">
-            <span class="w-14 h-6 bg-slate-800 text-sm text-white p-1 rounded ">3hrs 56 min ago</span>
+            <span class="h-6 p-1 text-sm text-white rounded w-14 bg-slate-800 ">3hrs 56 min ago</span>
           </div>
         </div>
-        <div class="botom-part flex items-center my-3 gap-2">
+        <div class="flex items-center gap-2 my-3 botom-part">
           <div class="w-20 ">
-            <img class=" rounded-full w-20" src="image/test_sml.jpg" alt="">
+            <img class="w-20 rounded-full " src="image/test_sml.jpg" alt="">
           </div>
           <div class="title-video">
-            <h3 class="text-base text-gray-900 font-bold ">
+            <h3 class="text-base font-bold text-gray-900 ">
               Building a Winning UX Strategy Using the Kano Model
             </h3>
           </div>
@@ -154,15 +167,15 @@
         <div class="relative">
           <img class="rounded-xl h-[205px]" src="image/test_img.jpg" alt="">
           <div class="absolute right-3 bottom-3">
-            <span class="w-14 h-6 bg-slate-800 text-sm text-white p-1 rounded ">3hrs 56 min ago</span>
+            <span class="h-6 p-1 text-sm text-white rounded w-14 bg-slate-800 ">3hrs 56 min ago</span>
           </div>
         </div>
-        <div class="botom-part flex items-center my-3 gap-2">
+        <div class="flex items-center gap-2 my-3 botom-part">
           <div class="w-20 ">
-            <img class=" rounded-full w-20" src="image/test_sml.jpg" alt="">
+            <img class="w-20 rounded-full " src="image/test_sml.jpg" alt="">
           </div>
           <div class="title-video">
-            <h3 class="text-base text-gray-900 font-bold ">
+            <h3 class="text-base font-bold text-gray-900 ">
               Building a Winning UX Strategy Using the Kano Model
             </h3>
           </div>
@@ -188,15 +201,15 @@
         <div class="relative">
           <img class="rounded-xl h-[205px]" src="image/test_img.jpg" alt="">
           <div class="absolute right-3 bottom-3">
-            <span class="w-14 h-6 bg-slate-800 text-sm text-white p-1 rounded ">3hrs 56 min ago</span>
+            <span class="h-6 p-1 text-sm text-white rounded w-14 bg-slate-800 ">3hrs 56 min ago</span>
           </div>
         </div>
-        <div class="botom-part flex items-center my-3 gap-2">
+        <div class="flex items-center gap-2 my-3 botom-part">
           <div class="w-20 ">
-            <img class=" rounded-full w-20" src="image/test_sml.jpg" alt="">
+            <img class="w-20 rounded-full " src="image/test_sml.jpg" alt="">
           </div>
           <div class="title-video">
-            <h3 class="text-base text-gray-900 font-bold ">
+            <h3 class="text-base font-bold text-gray-900 ">
               Building a Winning UX Strategy Using the Kano Model
             </h3>
           </div>

@@ -68,25 +68,29 @@ const videoHandelar = (videoID) => {
       <div class="main-item">
       <div class="relative">
         <img class="rounded-xl h-[205px]" src="${item?.thumbnail}" alt="">
-        <div class="absolute right-3 bottom-3">
-          <span class="w-14 h-6 bg-slate-800 text-sm text-white p-1 rounded hidden ">3hrs 56 min ago</span>
+        <div class="absolute  right-0 text-end bottom-[29px] lg:bottom-3">
+          <span class="w-14 h-6 bg-slate-800 text-sm text-white p-1 rounded  ">3hrs 56 min ago</span>
         </div>
       </div>
       <div class="botom-part flex items-center my-3 gap-2">
-        <div class="w-20 ">
-          <img class=" rounded-full w-20" src="${
-            item?.authors[0]?.profile_picture
-          }" alt="">
-        </div>
-        <div class="title-video">
+       
+
+        <div class="flex items-center  ">
+        <img src="${
+          item?.authors[0]?.profile_picture
+        }" alt="" class="h-[70px] w-[70px] rounded-[50%]  " />
+      </div>
+
+
+        <div class="title-video relative top-[-11px] left-[8px]">
           <h3 class="text-base text-gray-900 font-bold ">
             ${item.title}
           </h3>
         </div>
 
       </div>
-      <div class="pl-12">
-        <div class="text_tik">
+      <div class="lg:pl-[5rem] pl-12 inline-block lg:block  lg:mt-[-34px] relative lg:left-[7px] lg:bottom-[11px] left-[38px] bottom-[42px]">
+        <div class="text_tik  ">
           <h3 class=" flex items-center gap-4 text-base font-normal text-[##171717b3]">${
             item.authors[0]?.profile_name
           }
@@ -104,6 +108,7 @@ const videoHandelar = (videoID) => {
 
     </div>
       `;
+        div.classList.add("mx-auto");
         videoContainer?.appendChild(div);
       });
     }
