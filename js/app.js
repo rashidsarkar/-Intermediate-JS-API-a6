@@ -21,7 +21,7 @@ const tabHandler = (datas) => {
   datas.forEach((data) => {
     const div = document.createElement("div");
     div.innerHTML = `
-      <a id="tab_active" onclick="videoHandler('${data.category_id}'), handleTabClick(this)" class="tab tab-lg bg-gray-900 bg-opacity-10 text-base text-gray-900 text-opacity-70 font-medium">${data.category}</a>
+      <a id="tab_active" onclick="videoHandler('${data.category_id}'), handleTabClick(this)" class=" tab_active  tab tab-lg bg-gray-900 bg-opacity-10 text-base text-gray-900 text-opacity-70 font-medium">${data.category}</a>
     `;
 
     tabMain.appendChild(div);

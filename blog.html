@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+  <title>My Blog</title>
+</head>
+
+<body>
+  <header class="py-4 text-white bg-gray-900">
+    <h1 class="text-3xl text-center">My Blog</h1>
+  </header>
+  <nav class="p-4 bg-gray-700">
+    <ul class="flex justify-center space-x-4">
+      <li><a href="#" class="text-white">Home</a></li>
+      <li><a href="#" class="text-white">About</a></li>
+      <li><a href="#" class="text-white">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="max-w-4xl p-4 mx-auto">
+    <article class="mb-8">
+      <h2 class="text-2xl font-semibold">Discuss the scope of var, let, and const</h2>
+      <p>
+        In JavaScript, the scope of variables declared with <code>var</code>, <code>let</code>, and <code>const</code>
+        differs. Here's a brief overview:
+      </p>
+      <p>
+        <strong><code>var</code>:</strong> Variables declared with <code>var</code> are function-scoped. This means they
+        are limited to the function in which they are defined or are globally scoped if declared outside of any
+        function.
+      </p>
+      <p>
+        <strong><code>let</code>:</strong> Variables declared with <code>let</code> are block-scoped. They are limited
+        to the block (usually enclosed in curly braces) in which they are defined, like if statements or loops.
+      </p>
+      <p>
+        <strong><code>const</code>:</strong> Like <code>let</code>, variables declared with <code>const</code> are
+        block-scoped. However, they cannot be reassigned once a value is assigned to them, making them useful for
+        defining constants.
+      </p>
+    </article>
+
+    <article class="mb-8">
+      <h2 class="text-2xl font-semibold">Tell us the use cases of null and undefined</h2>
+      <p>
+        <strong><code>null</code>:</strong> In JavaScript, <code>null</code> is a special value that represents the
+        intentional absence of any object value. It is often used to indicate that a variable should have no value or
+        that an object property is intentionally empty.
+      </p>
+      <p>
+        <strong><code>undefined</code>:</strong> <code>undefined</code> represents a variable that has been declared but
+        has not been assigned any value. It is also the default return value of functions that do not explicitly return
+        anything.
+      </p>
+      <p>
+        Use cases for <code>null</code> and <code>undefined</code> include error handling, initialization of variables,
+        and checking if a variable has a meaningful value.
+      </p>
+    </article>
+
+    <article class="mb-8">
+      <h2 class="text-2xl font-semibold">What do you mean by REST API?</h2>
+      <p>
+        <strong>REST API</strong>, which stands for Representational State Transfer Application Programming Interface,
+        is an architectural style for designing networked applications. It is based on a set of constraints and
+        principles that encourage a stateless, client-server communication model.
+      </p>
+      <p>
+        REST APIs use HTTP methods (such as GET, POST, PUT, DELETE) to perform operations on resources identified by
+        URLs (Uniform Resource Locators). These resources can be data objects, services, or entities, and they are
+        manipulated using standard HTTP requests.
+      </p>
+      <p>
+        RESTful APIs are known for their simplicity, scalability, and ease of use, making them a popular choice for
+        building web services and APIs that can be consumed by various clients, including web browsers and mobile
+        applications.
+      </p>
+    </article>
+  </main>
+
+  <footer class="py-2 text-center text-white bg-gray-900">
+    <p>&copy; 2023 <a href="#" class="text-red-500">Rongila</a> Blog</p>
+  </footer>
+</body>
+
+</html>
