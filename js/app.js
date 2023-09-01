@@ -1,6 +1,7 @@
 const tabMain = document.getElementById("tab_main");
 const videoContainer = document.getElementById("video-container");
 const videoContainer2 = document.getElementById("video-container2");
+const sortVewelement = document.getElementById("sort-vew");
 const dataHandle = async () => {
   const res = await fetch(
     "https://openapi.programming-hero.com/api/videos/categories"
@@ -15,16 +16,54 @@ const tabHandelar = (datas) => {
   videoHandelar("1000");
   console.log(datas);
 
+  // tab part
+
+  // tab part
+
   datas.forEach((data) => {
     const div = document.createElement("div");
     div.innerHTML = `
-    <a onclick="videoHandelar('${data.category_id}')" class="tab tab-lg bg-gray-900 bg-opacity-10 text-base text-gray-900 text-opacity-70 font-medium">${data.category}</a>
+    <a id="tab_active" onclick="videoHandelar('${data.category_id}'),handleTabClick(this)" class=" tab_active tab tab-lg bg-gray-900 bg-opacity-10 text-base text-gray-900 text-opacity-70 font-medium">${data.category}</a>
     
     
     `;
+
     tabMain.appendChild(div);
   });
+  const tabAcive = document.querySelectorAll(".tab_active");
+  tabAcive[0].classList.add("tab-active");
 };
+
+// new id
+
+const handleTabClick = (tab) => {
+  const tabs = document.querySelectorAll(".tab");
+
+  tabs.forEach((t) => {
+    t.classList.remove("tab-active");
+    t.style.backgroundColor = "";
+  });
+
+  tab.classList.add("tab-active");
+  tab.style.backgroundColor = "#FF1F3D";
+};
+
+// new id
+
+// tab active
+const tabEls = document.querySelectorAll(".tab");
+tabEls.forEach((mytab) => {
+  mytab.addEventListener("click", () => {
+    const activeTab = document.querySelector(".tab-active");
+    if (activeTab) {
+      activeTab.classList.remove("tab-active");
+    }
+    mytab.classList.add("tab-active");
+  });
+});
+
+// tab active
+
 const videoHandelar = (videoID) => {
   const videoHandelar = async () => {
     const res = await fetch(
@@ -51,6 +90,10 @@ const videoHandelar = (videoID) => {
       videoContainer2.appendChild(errorDiv);
     } else {
       // abar error
+
+      // sort
+
+      // sort
 
       data.forEach((item) => {
         // new error
@@ -145,7 +188,7 @@ const videoHandelar = (videoID) => {
 
         </div>
 
-        <p class=" text-base font-normal text-[##171717b3]"> <span>${
+        <p  class=" text-base font-normal text-[##171717b3]"> <span id="myVew" >${
           item.others.views
         }</span> views</p>
       </div>
@@ -159,5 +202,18 @@ const videoHandelar = (videoID) => {
   };
   videoHandelar();
 };
+// sort part
+
+// ...
+const sortItemElement = document.getElementById("sort_item_element");
+
+function sortByViewsDescending(a, b) {
+  const viewsA = parseFloat(a.others.views.replace("K", "")) * 1000;
+  const viewsB = parseFloat(b.others.views.replace("K", "")) * 1000;
+
+  return viewsB - viewsA;
+}
+
+// sort part
 
 dataHandle();
