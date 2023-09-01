@@ -1,5 +1,6 @@
 const tabMain = document.getElementById("tab_main");
 const videoContainer = document.getElementById("video-container");
+const videoContainer2 = document.getElementById("video-container2");
 const dataHandle = async () => {
   const res = await fetch(
     "https://openapi.programming-hero.com/api/videos/categories"
@@ -37,10 +38,16 @@ const videoHandelar = (videoID) => {
     // abar error
     if (data.length === 0) {
       const errorDiv = document.createElement("div");
+      videoContainer2.innerHTML = "";
       errorDiv.innerHTML = `
-      <p class="text-red-500">No videos available for this category.</p>
+     
+      <div class=" flex flex-col items-center justify-center   lg:w-[413px] p-4">
+      <img class="w-auto mx-auto" src="image/Icon.png" alt="" />
+      <p class="text-center font-bold text-[#171717] lg:text-3xl text-xl">Oops!! Sorry, There is no <br /> content here</p>
+      </div>
     `;
-      videoContainer.appendChild(errorDiv);
+
+      videoContainer2.appendChild(errorDiv);
     } else {
       // abar error
 
@@ -48,6 +55,7 @@ const videoHandelar = (videoID) => {
         // new error
 
         // new error
+        videoContainer2.innerHTML = "";
 
         const div = document.createElement("div");
 
