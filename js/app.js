@@ -12,6 +12,7 @@ const dataHandle = async () => {
 };
 
 const tabHandelar = (datas) => {
+  videoHandelar("1000");
   console.log(datas);
 
   datas.forEach((data) => {
@@ -72,7 +73,7 @@ const videoHandelar = (videoID) => {
           }
         };
         let mytime = item.others.posted_date;
-        console.log(mytime);
+        // console.log(mytime);
         // let mytime = 16278;
 
         // time work
